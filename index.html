@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoger of Lager Spel met Dobbelstenen</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Hoger of Lager met Dobbelstenen</h1>
+        <p id="status">Druk op "Start" om te beginnen.</p>
+        <p>Credits: <span id="credits">10</span></p>
+        <p>Huidig getal: <span id="current-number">?</span></p>
+
+        <div class="dice-container">
+            <div class="dice" id="dice1">🎲</div>
+            <div class="dice" id="dice2">🎲</div>
+        </div>
+
+        <div class="buttons">
+            <button id="start-game">Start</button>
+            <button id="hoger" disabled>Hoger</button>
+            <button id="lager" disabled>Lager</button>
+        </div>
+
+        <p id="result"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
