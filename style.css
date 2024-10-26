@@ -1,63 +1,72 @@
+/* Basis styling :) */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff; /* Lichtblauwe achtergrond */
     text-align: center;
-    margin: 0;
-    padding: 0;
 }
 
 .game-container {
-    background-color: white;
-    padding: 20px;
+    background-color: #ffffff;
+    padding: 15px;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: inline-block;
-    margin-top: 100px;
+    margin-top: 80px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.15); /*  beetje schaduw :P */
 }
 
 h1 {
     font-size: 2em;
-    margin-bottom: 20px;
+    color: #333;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.1em;
 }
 
 #status {
     font-weight: bold;
-    margin-bottom: 20px;
+    color: #444;
 }
 
 .dice-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
     margin: 20px 0;
 }
 
 .dice {
     font-size: 3em;
+    /* Speelse animatie bij elke draai */
+    transition: transform 0.5s;
+}
+
+@keyframes roll {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.dice.roll {
+    animation: roll 0.5s ease-out;
 }
 
 .buttons {
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 button {
     padding: 10px 20px;
     font-size: 1em;
-    margin: 10px;
     cursor: pointer;
+    margin: 5px;
 }
 
 button:disabled {
-    background-color: #ccc;
+    background-color: #aaa;
     cursor: not-allowed;
 }
 
 #result {
-    font-size: 1.5em;
-    margin-top: 20px;
+    font-size: 1.3em;
+    color: #2c3e50;
 }
-
